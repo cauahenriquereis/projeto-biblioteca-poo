@@ -16,4 +16,15 @@ public class Livro extends ItemBiblioteca{
     public void exibirDetalhes() {
         System.out.println("Livro: " + getTitulo() + " | Autor: " + this.autor + " | Páginas: " + this.numPaginas);
     }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public int getNumPaginas() {
+        return numPaginas;
+    }
 }
+
+
+

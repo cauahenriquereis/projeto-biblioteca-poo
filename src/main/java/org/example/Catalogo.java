@@ -55,4 +55,8 @@ public class Catalogo {
            item.exibirDetalhes();
        }
    }
+
+    public List<ItemBiblioteca> getItens() {
+        return itens;
+    }
 }

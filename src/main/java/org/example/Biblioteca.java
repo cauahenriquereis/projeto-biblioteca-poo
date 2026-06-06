@@ -61,4 +61,8 @@ public class Biblioteca {
 
         emprestimosAtivos.remove(emprestimo);
     }
+
+    public List<Emprestimo> getEmprestimosAtivos() {
+        return emprestimosAtivos;
+    }
 }

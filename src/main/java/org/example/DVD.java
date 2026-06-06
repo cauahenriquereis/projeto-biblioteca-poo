@@ -15,4 +15,12 @@ public class DVD extends ItemBiblioteca{
     public void exibirDetalhes() {
         System.out.println("DVD: " + getTitulo() + " | Diretor: " + this.diretor + " | Duração em minutos: " + duracao);
     }
+
+    public String getDiretor() {
+        return diretor;
+    }
+
+    public int getDuracao() {
+        return duracao;
+    }
 }

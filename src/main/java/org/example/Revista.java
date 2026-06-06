@@ -15,4 +15,14 @@ public class Revista extends ItemBiblioteca{
     public void exibirDetalhes() {
         System.out.println("Revista: " + getTitulo() + " | Edição: " + this.edicao + " | Mês e Ano de Lançamento: " + this.mesAno);
     }
+
+    public int getEdicao() {
+        return edicao;
+    }
+
+    public String getMesAno() {
+        return mesAno;
+    }
 }
+
+
