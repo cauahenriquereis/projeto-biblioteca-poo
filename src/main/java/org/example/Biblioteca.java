@@ -31,12 +31,12 @@ public class Biblioteca {
         return null;
     }
 
-    public void realizarEmprestimo(Usuario usuario, ItemBiblioteca item, LocalDate dataPrevista){
+    public void realizarEmprestimo(Usuario usuario, ItemBiblioteca item, LocalDate dataPrevista) throws ItemIndisponivelException, LimiteEmprestimoException {
 
-        // if (!item.isDisponivel()) lançar ItemIndisponivelException
+        if (!item.isDisponivel()) throw new ItemIndisponivelException("Este item não está disponível!");
 
         if(!usuario.podePegarEmprestimo()){
-            //lançar LimiteEmprestimoException;
+            throw new LimiteEmprestimoException("Limite de em[restimo simultâneos ja alcançado");
         }
 
         Emprestimo emprestimo = new Emprestimo(usuario, item, LocalDate.now(), dataPrevista);
