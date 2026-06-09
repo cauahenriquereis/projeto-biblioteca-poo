@@ -11,11 +11,8 @@ public class TelaPrincipal extends JFrame {
         this.biblioteca = biblioteca;
 
         setTitle("Sistema de Biblioteca: ");
-
         setSize(400, 200);
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         setLocationRelativeTo(null);
 
         JPanel painel = new JPanel(new GridLayout(3, 1, 10, 10));

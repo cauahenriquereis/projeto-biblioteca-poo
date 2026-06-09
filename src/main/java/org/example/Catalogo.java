@@ -6,6 +6,7 @@ import java.util.List;
 public class Catalogo {
 
     private List<ItemBiblioteca> itens;
+    Biblioteca biblioteca;
 
    public Catalogo (){
        this.itens = new ArrayList<>();
@@ -49,6 +50,15 @@ public class Catalogo {
 
        return listaDisponiveis;
    }
+
+    public ItemBiblioteca buscarItemPorId(int id) {
+        for (ItemBiblioteca item : itens) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 
    public void listarTodos(){
        for(ItemBiblioteca item : itens){

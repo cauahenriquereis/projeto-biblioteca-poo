@@ -11,14 +11,11 @@ public class MenuUsuario extends JFrame {
         this.biblioteca = biblioteca;
 
         setTitle("Menu Usuário: ");
-
         setSize(400, 300);
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         setLocationRelativeTo(null);
 
-        JPanel painel = new JPanel(new GridLayout(5, 1, 10, 10));
+        JPanel painel = new JPanel(new GridLayout(6, 1, 10, 10));
 
         JLabel titulo = new JLabel("Bem-vindo ao Menu Usuário", SwingConstants.CENTER);
 
@@ -26,12 +23,14 @@ public class MenuUsuario extends JFrame {
         JButton btnRealizarDevolucao = new JButton("Realizar Devolução");
         JButton btnListarCatalogo = new JButton("Listar Catálogo");
         JButton btnBuscarItem = new JButton("Buscar Item");
+        JButton btnVoltar = new JButton("Voltar");
 
         painel.add(titulo);
         painel.add(btnRealizarEmprestimo);
         painel.add(btnRealizarDevolucao);
         painel.add(btnListarCatalogo);
         painel.add(btnBuscarItem);
+        painel.add(btnVoltar);
 
         add(painel);
 
@@ -55,6 +54,10 @@ public class MenuUsuario extends JFrame {
             dispose();
         });
 
+        btnVoltar.addActionListener( e ->{
+            new TelaPrincipal(biblioteca);
+            dispose();
+        });
 
         setVisible(true);
     }

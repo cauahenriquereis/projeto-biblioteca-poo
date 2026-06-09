@@ -50,8 +50,6 @@ public class Biblioteca {
 
         }
 
-
-
     public void realizarDevolucao(Emprestimo emprestimo){
 
         emprestimo.registrarDevolucao();
@@ -62,7 +60,28 @@ public class Biblioteca {
         emprestimosAtivos.remove(emprestimo);
     }
 
+    public Emprestimo buscarEmprestimoPorId(int id){
+        for (Emprestimo emprestimo : emprestimosAtivos){
+            if(emprestimo.getItem().getId() == id){
+                return emprestimo;
+            }
+        }
+        return null;
+    }
+
     public List<Emprestimo> getEmprestimosAtivos() {
         return emprestimosAtivos;
+    }
+
+    public int gerarIdUsuario() {
+        return usuarios.size() + 1;
+    }
+
+    public int gerarIdItem(){
+        return catalogo.getItens().size() + 1;
+    }
+
+    public Catalogo getCatalogo() {
+        return catalogo;
     }
 }
