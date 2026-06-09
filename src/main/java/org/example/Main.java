@@ -7,6 +7,7 @@ public class Main {
 
         Catalogo catalogo = new Catalogo();
         Biblioteca biblioteca = new Biblioteca(catalogo);
+        GerenciadorArquivos.carregarCatalogo(catalogo);
         new TelaPrincipal(biblioteca);
 
     }

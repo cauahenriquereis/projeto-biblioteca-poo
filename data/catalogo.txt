@@ -1,4 +1,0 @@
-LIVRO;1;Clean Code;Robert Martin;431
-LIVRO;2;O Hobbit;J.R.R Tolkien;336
-REVISTA;3;National Geographic;200;Janeiro 2025
-DVD;4;Inception;Christopher Nolan;148

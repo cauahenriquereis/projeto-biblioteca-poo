@@ -15,19 +15,21 @@ public class MenuBibliotecario extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        JPanel painel = new JPanel(new GridLayout(5, 1, 10, 10));
+        JPanel painel = new JPanel(new GridLayout(6, 1, 10, 10));
 
         JLabel titulo = new JLabel("Bem-vindo ao Menu Bibliotecário", SwingConstants.CENTER);
 
         JButton btnCadastrarItem = new JButton("Cadastrar Item");
         JButton btnCadastrarUsuario = new JButton("Cadastrar Usuário");
         JButton btnListarCatalogo = new JButton("Listar Catálogo");
+        JButton btnRemoverItem = new JButton("Remover Item");
         JButton btnVoltar = new JButton("Voltar");
 
         painel.add(titulo);
         painel.add(btnCadastrarItem);
         painel.add(btnCadastrarUsuario);
         painel.add(btnListarCatalogo);
+        painel.add(btnRemoverItem);
         painel.add(btnVoltar);
 
         add(painel);
@@ -49,6 +51,11 @@ public class MenuBibliotecario extends JFrame {
 
         btnVoltar.addActionListener(e ->{
             new TelaPrincipal(biblioteca);
+            dispose();
+        });
+
+        btnRemoverItem.addActionListener( e ->{
+            new TelaRemoverItem(biblioteca);
             dispose();
         });
 

@@ -140,6 +140,8 @@ public class TelaCadastroItem extends JFrame {
 
             JOptionPane.showMessageDialog(this, "Item cadastrado com sucesso!");
 
+            GerenciadorArquivos.salvarCatalogo(biblioteca.getCatalogo());
+
             // limpa campos comuns
             txtTitulo.setText("");
 
