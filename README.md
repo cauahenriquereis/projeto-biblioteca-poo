@@ -1,6 +1,6 @@
 # 📚 Sistema de Gerenciamento de Biblioteca
 
-Sistema de gerenciamento de biblioteca desenvolvido em Java, aplicando os principais conceitos de Programação Orientada a Objetos como parte do projeto final da disciplina de PPO do INATEL.
+Sistema de gerenciamento de biblioteca desenvolvido em Java, aplicando os principais conceitos de Programação Orientada a Objetos como parte do projeto final da disciplina de POO do INATEL.
 
 ---
 
