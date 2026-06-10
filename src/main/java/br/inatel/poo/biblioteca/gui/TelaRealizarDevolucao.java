@@ -1,8 +1,10 @@
-package org.example;
+package br.inatel.poo.biblioteca.gui;
+
+import br.inatel.poo.biblioteca.model.Emprestimo;
+import br.inatel.poo.biblioteca.service.Biblioteca;
 
 import javax.swing.*;
 import java.awt.*;
-import java.time.LocalDate;
 
 public class TelaRealizarDevolucao extends JFrame {
 

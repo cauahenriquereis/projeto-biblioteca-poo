@@ -1,7 +1,13 @@
-package org.example;
+package br.inatel.poo.biblioteca.gui;
+
+import br.inatel.poo.biblioteca.model.*;
+import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
+
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class MenuBibliotecario extends JFrame {
 
@@ -61,5 +67,6 @@ public class MenuBibliotecario extends JFrame {
 
         setVisible(true);
     }
+
 
 }

@@ -1,6 +1,6 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
-public class Livro extends ItemBiblioteca{
+public class Livro extends ItemBiblioteca {
 
     private String autor;
     private int numPaginas;

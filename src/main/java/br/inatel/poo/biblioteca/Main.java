@@ -1,6 +1,9 @@
-package org.example;
+package br.inatel.poo.biblioteca;
 
-import java.time.LocalDate;
+import br.inatel.poo.biblioteca.gui.TelaPrincipal;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
+import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.service.Catalogo;
 
 public class Main {
     public static void main(String[] args) {

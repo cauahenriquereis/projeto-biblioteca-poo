@@ -1,9 +1,9 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public class Usuario extends Pessoa{
+public class Usuario extends Pessoa {
 
     private List <Emprestimo> historico;
     private int limiteEmprestimo = 3;

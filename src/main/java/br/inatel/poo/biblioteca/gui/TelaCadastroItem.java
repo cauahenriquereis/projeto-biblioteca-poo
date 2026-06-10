@@ -1,4 +1,10 @@
-package org.example;
+package br.inatel.poo.biblioteca.gui;
+
+import br.inatel.poo.biblioteca.model.DVD;
+import br.inatel.poo.biblioteca.model.Livro;
+import br.inatel.poo.biblioteca.model.Revista;
+import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 
 import javax.swing.*;
 import java.awt.*;
@@ -140,7 +146,7 @@ public class TelaCadastroItem extends JFrame {
 
             JOptionPane.showMessageDialog(this, "Item cadastrado com sucesso!");
 
-            GerenciadorArquivos.salvarCatalogo(biblioteca.getCatalogo());
+           GerenciadorArquivos.salvarCatalogo(biblioteca.getCatalogo());
 
             // limpa campos comuns
             txtTitulo.setText("");

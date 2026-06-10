@@ -1,4 +1,6 @@
-package org.example;
+package br.inatel.poo.biblioteca.service;
+
+import br.inatel.poo.biblioteca.model.ItemBiblioteca;
 
 import java.util.ArrayList;
 import java.util.List;

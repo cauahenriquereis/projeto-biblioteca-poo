@@ -1,4 +1,8 @@
-package org.example;
+package br.inatel.poo.biblioteca.gui;
+
+import br.inatel.poo.biblioteca.model.ItemBiblioteca;
+import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 
 import javax.swing.*;
 import java.awt.*;

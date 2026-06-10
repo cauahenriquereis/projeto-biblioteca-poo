@@ -1,6 +1,6 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
-public class Revista extends ItemBiblioteca{
+public class Revista extends ItemBiblioteca {
 
     private int edicao;
     private String mesAno;

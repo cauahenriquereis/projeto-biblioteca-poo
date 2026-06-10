@@ -1,4 +1,4 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
 public abstract class ItemBiblioteca {
 

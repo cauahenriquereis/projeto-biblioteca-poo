@@ -1,4 +1,4 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

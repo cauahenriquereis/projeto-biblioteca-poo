@@ -1,10 +1,13 @@
-package org.example;
+package br.inatel.poo.biblioteca.persistence;
+
+import br.inatel.poo.biblioteca.model.*;
+import br.inatel.poo.biblioteca.service.Catalogo;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
 import java.time.LocalDate;
+import java.util.List;
 
 public class GerenciadorArquivos {
 
@@ -41,7 +44,7 @@ public class GerenciadorArquivos {
         }
     }
 
-    public static void salvarEmprestimos(List<Emprestimo> emprestimos) {
+    public static void salvarEmprestimos(java.util.List<Emprestimo> emprestimos) {
         StringBuilder conteudo = new StringBuilder();
 
         for (Emprestimo emprestimo : emprestimos) {
@@ -66,7 +69,7 @@ public class GerenciadorArquivos {
             Path caminho = Path.of("data/catalogo.txt");
             if (!Files.exists(caminho)) return;
 
-            List<String> linhas = Files.readAllLines(caminho);
+            java.util.List<String> linhas = Files.readAllLines(caminho);
             for (String linha : linhas) {
                 String[] dados = linha.split(";");
                 switch (dados[0]) {
@@ -87,7 +90,7 @@ public class GerenciadorArquivos {
         }
     }
 
-    public static void carregarEmprestimos(Catalogo catalogo, List<Usuario> usuarios, List<Emprestimo> emprestimos) {
+    public static void carregarEmprestimos(Catalogo catalogo, java.util.List<Usuario> usuarios, java.util.List<Emprestimo> emprestimos) {
         try {
             Path caminho = Path.of("data/emprestimos.txt");
             if (!Files.exists(caminho)) return;

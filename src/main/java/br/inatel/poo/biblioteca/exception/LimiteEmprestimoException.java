@@ -1,4 +1,4 @@
-package org.example;
+package br.inatel.poo.biblioteca.exception;
 
 public class LimiteEmprestimoException extends Exception {
 

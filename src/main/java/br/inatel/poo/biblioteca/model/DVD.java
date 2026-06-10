@@ -1,6 +1,6 @@
-package org.example;
+package br.inatel.poo.biblioteca.model;
 
-public class DVD extends ItemBiblioteca{
+public class DVD extends ItemBiblioteca {
 
     private String diretor;
     private int duracao;
