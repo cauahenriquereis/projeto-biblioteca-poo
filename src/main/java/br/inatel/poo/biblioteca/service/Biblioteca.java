@@ -49,7 +49,6 @@ public class Biblioteca {
 
         usuario.adicionarEmprestimo(emprestimo);
 
-
         item.setDisponivel(false);
 
         emprestimosAtivos.add(emprestimo);

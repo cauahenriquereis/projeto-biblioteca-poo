@@ -62,11 +62,18 @@ public class TelaRealizarDevolucao extends JFrame {
 
                     GerenciadorArquivos.salvarEmprestimos(biblioteca.getEmprestimosAtivos());
 
-                    JOptionPane.showMessageDialog(this, "Devolução realizada com sucesso!");
+                    double multa = emprestimo.calcularMulta();
+
+                    if (multa > 0) {
+                        JOptionPane.showMessageDialog(this, "Devolução realizada! Multa: R$ " + multa);
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Devolução realizada com sucesso!");
+                    }
+
 
                     areaTexto.setText("");
                     for (Emprestimo emprestimo1 : biblioteca.getEmprestimosAtivos()) {
-                        areaTexto.append("ID Item: " + emprestimo.getItem().getId() + " | Item: " + emprestimo.getItem().getTitulo() + " | Usuário: " + emprestimo.getUsuario().getNome() + " | Status: " + emprestimo.getStatus() + "\n");
+                        areaTexto.append("ID Item: " + emprestimo1.getItem().getId() + " | Item: " + emprestimo1.getItem().getTitulo() + " | Usuário: " + emprestimo1.getUsuario().getNome() + " | Status: " + emprestimo1.getStatus() + "\n");
                     }
 
 

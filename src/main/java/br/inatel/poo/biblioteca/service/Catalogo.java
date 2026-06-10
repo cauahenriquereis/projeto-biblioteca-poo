@@ -8,7 +8,6 @@ import java.util.List;
 public class Catalogo {
 
     private List<ItemBiblioteca> itens;
-    Biblioteca biblioteca;
 
    public Catalogo (){
        this.itens = new ArrayList<>();
