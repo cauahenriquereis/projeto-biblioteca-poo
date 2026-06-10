@@ -2,6 +2,7 @@ package br.inatel.poo.biblioteca.gui;
 
 import br.inatel.poo.biblioteca.model.Usuario;
 import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 
 import javax.swing.*;
 import java.awt.GridLayout;
@@ -54,6 +55,8 @@ public class TelaCadastroUsuario extends JFrame {
             biblioteca.cadastrarUsuario(usuario);
 
             JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+
+            GerenciadorArquivos.salvarUsuarios(biblioteca.getUsuarios());
 
             txtNome.setText("");
             txtCpf.setText("");

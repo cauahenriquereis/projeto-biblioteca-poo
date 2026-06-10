@@ -90,4 +90,8 @@ public class Biblioteca {
     public Catalogo getCatalogo() {
         return catalogo;
     }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
 }

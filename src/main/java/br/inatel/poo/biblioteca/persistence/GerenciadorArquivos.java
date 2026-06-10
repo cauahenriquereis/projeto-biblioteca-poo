@@ -1,6 +1,7 @@
 package br.inatel.poo.biblioteca.persistence;
 
 import br.inatel.poo.biblioteca.model.*;
+import br.inatel.poo.biblioteca.service.Biblioteca;
 import br.inatel.poo.biblioteca.service.Catalogo;
 
 import java.io.IOException;
@@ -41,6 +42,24 @@ public class GerenciadorArquivos {
             System.out.println("Catálogo salvo com sucesso!");
         } catch (IOException e) {
             System.out.println("Erro ao salvar catálogo: " + e.getMessage());
+        }
+    }
+
+    public static void salvarUsuarios(List<Usuario> usuarios) {
+        StringBuilder conteudo = new StringBuilder();
+
+        for (Usuario usuario : usuarios) {
+            conteudo.append(usuario.getId()).append(";")
+                    .append(usuario.getNome()).append(";")
+                    .append(usuario.getCpf()).append(";")
+                    .append(usuario.getTelefone()).append("\n");
+        }
+
+        try {
+            Files.writeString(Path.of("data/usuario.txt"), conteudo.toString());
+            System.out.println("Usuários salvos com sucesso!");
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar usuários: " + e.getMessage());
         }
     }
 
@@ -87,6 +106,31 @@ public class GerenciadorArquivos {
             System.out.println("Catálogo carregado com sucesso!");
         } catch (IOException e) {
             System.out.println("Erro ao carregar catálogo: " + e.getMessage());
+        }
+    }
+
+    public static void carregarUsuarios(Biblioteca biblioteca) {
+        try {
+            Path caminho = Path.of("data/usuario.txt");
+            if (!Files.exists(caminho)) return;
+
+            List<String> linhas = Files.readAllLines(caminho);
+
+            for (String linha : linhas) {
+                String[] dados = linha.split(";");
+
+                int id = Integer.parseInt(dados[0]);
+                String nome = dados[1];
+                String cpf = dados[2];
+                String telefone = dados[3];
+
+                Usuario usuario = new Usuario(id, nome, cpf, telefone);
+                biblioteca.cadastrarUsuario(usuario);
+            }
+
+            System.out.println("Usuários carregados com sucesso!");
+        } catch (IOException e) {
+            System.out.println("Erro ao carregar usuários: " + e.getMessage());
         }
     }
 

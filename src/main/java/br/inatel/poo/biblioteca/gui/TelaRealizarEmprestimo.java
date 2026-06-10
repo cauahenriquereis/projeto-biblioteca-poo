@@ -4,6 +4,7 @@ import br.inatel.poo.biblioteca.exception.ItemIndisponivelException;
 import br.inatel.poo.biblioteca.exception.LimiteEmprestimoException;
 import br.inatel.poo.biblioteca.model.ItemBiblioteca;
 import br.inatel.poo.biblioteca.model.Usuario;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 import br.inatel.poo.biblioteca.service.Biblioteca;
 
 import javax.swing.*;
@@ -85,7 +86,10 @@ public class TelaRealizarEmprestimo extends JFrame {
 
                 LocalDate dataPrevista = LocalDate.now().plusDays(prazo);
                 biblioteca.realizarEmprestimo(usuario, item, dataPrevista);
+
                 JOptionPane.showMessageDialog(this, "Empréstimo realizado com sucesso!");
+
+                GerenciadorArquivos.salvarEmprestimos(biblioteca.getEmprestimosAtivos());
 
                 // atualiza a lista de disponíveis
                 areaTexto.setText("");

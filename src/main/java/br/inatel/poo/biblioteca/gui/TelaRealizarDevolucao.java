@@ -2,6 +2,7 @@ package br.inatel.poo.biblioteca.gui;
 
 import br.inatel.poo.biblioteca.model.Emprestimo;
 import br.inatel.poo.biblioteca.service.Biblioteca;
+import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 
 import javax.swing.*;
 import java.awt.*;
@@ -58,7 +59,17 @@ public class TelaRealizarDevolucao extends JFrame {
                     Emprestimo emprestimo = biblioteca.buscarEmprestimoPorId(idItem);
 
                     biblioteca.realizarDevolucao(emprestimo);
+
+                    GerenciadorArquivos.salvarEmprestimos(biblioteca.getEmprestimosAtivos());
+
                     JOptionPane.showMessageDialog(this, "Devolução realizada com sucesso!");
+
+                    areaTexto.setText("");
+                    for (Emprestimo emprestimo1 : biblioteca.getEmprestimosAtivos()) {
+                        areaTexto.append("ID Item: " + emprestimo.getItem().getId() + " | Item: " + emprestimo.getItem().getTitulo() + " | Usuário: " + emprestimo.getUsuario().getNome() + " | Status: " + emprestimo.getStatus() + "\n");
+                    }
+
+
                 });
 
         btnVoltar.addActionListener(e -> {
