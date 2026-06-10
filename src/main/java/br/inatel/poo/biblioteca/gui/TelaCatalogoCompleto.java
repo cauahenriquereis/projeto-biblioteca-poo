@@ -10,7 +10,7 @@ public class TelaCatalogoCompleto extends JFrame {
 
     private Biblioteca biblioteca;
 
-    public TelaCatalogoCompleto(Biblioteca biblioteca){
+    public TelaCatalogoCompleto(Biblioteca biblioteca, String origem){
         this.biblioteca =  biblioteca;
 
         setTitle("Catálogo Completo");
@@ -40,7 +40,12 @@ public class TelaCatalogoCompleto extends JFrame {
         add(painel);
 
         btnVoltar.addActionListener( e ->{
-            new MenuBibliotecario(biblioteca);
+            if(origem.equals("bibliotecario")) {
+                new MenuBibliotecario(biblioteca);
+            }
+            else{
+                new MenuUsuario(biblioteca);
+            }
             dispose();
         });
 

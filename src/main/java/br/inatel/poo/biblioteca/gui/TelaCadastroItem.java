@@ -17,7 +17,7 @@ public class TelaCadastroItem extends JFrame {
         this.biblioteca = biblioteca;
 
         setTitle("Cadastrar Item");
-        setSize(400, 400);
+        setSize(400, 320);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 

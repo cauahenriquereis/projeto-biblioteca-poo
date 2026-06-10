@@ -51,7 +51,7 @@ public class MenuBibliotecario extends JFrame {
         });
 
         btnListarCatalogo.addActionListener(e -> {
-            new TelaCatalogoCompleto(biblioteca);
+            new TelaCatalogoCompleto(biblioteca, "bibliotecario");
             dispose();
         });
 

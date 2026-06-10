@@ -47,7 +47,7 @@ public class MenuUsuario extends JFrame {
         });
 
         btnListarCatalogo.addActionListener(e -> {
-            new TelaCatalogoCompleto(biblioteca);
+            new TelaCatalogoCompleto(biblioteca, "usuario");
             dispose();
         });
 

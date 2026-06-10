@@ -66,8 +66,6 @@ public class TelaRealizarDevolucao extends JFrame {
             dispose();
         });
 
-        System.out.println("Empréstimos ativos: " + biblioteca.getEmprestimosAtivos().size());
-
         setVisible(true);
 
     }
