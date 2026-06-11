@@ -30,8 +30,16 @@ public class TelaRealizarEmprestimo extends JFrame {
         JTextArea areaTexto = new JTextArea();
         areaTexto.setEditable(false);
 
+        areaTexto.append("\n--- ITENS CADASTRADOS ---\n\n");
+
         for (ItemBiblioteca item : biblioteca.getCatalogo().listarDisponiveis()) {
-            areaTexto.append("ID: " + item.getId() + " | " + item.getTitulo() + " | " + item.getClass().getSimpleName() + "\n");
+            areaTexto.append("ID Item: " + item.getId() + " | " + item.getTitulo() + " | " + item.getClass().getSimpleName() + "\n");
+        }
+
+        areaTexto.append("\n--- USUÁRIOS CADASTRADOS ---\n\n");
+
+        for(Usuario usuario : biblioteca.getUsuarios()){
+            areaTexto.append("ID Usuário: " + usuario.getId() + " | " + usuario.getNome() + "\n");
         }
 
         JScrollPane scrollPane = new JScrollPane(areaTexto);

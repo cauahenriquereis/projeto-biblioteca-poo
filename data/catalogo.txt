@@ -1,6 +1,8 @@
 LIVRO;1;Clean Code;Robert Martin;431
 LIVRO;2;O Hobbit;J.R.R Tolkien;336
 REVISTA;3;National Geographic;200;Janeiro 2025
-REVISTA;4;Veja;45;Março 2025
 DVD;5;Inception;Christopher Nolan;148
 LIVRO;6;Interestelar;Christopher Nolan;169
+LIVRO;7;A psicologia financeira;Morgan Housel;276
+REVISTA;8;Copa do Mundo - Brasil Hexa;1;maio 2026
+DVD;9;A casa monstro;Gil Kenan;135
