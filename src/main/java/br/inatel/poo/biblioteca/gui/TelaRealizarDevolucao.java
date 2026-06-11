@@ -54,7 +54,7 @@ public class TelaRealizarDevolucao extends JFrame {
 
         btnDevolucao.addActionListener(e -> {
 
-                    int idItem = Integer.parseInt(txtIdItem.getText());
+                    int idItem = Integer.parseInt(txtIdItem.getText().trim());
 
                     Emprestimo emprestimo = biblioteca.buscarEmprestimoPorId(idItem);
 

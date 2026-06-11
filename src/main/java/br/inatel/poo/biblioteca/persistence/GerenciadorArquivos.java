@@ -158,6 +158,7 @@ public class GerenciadorArquivos {
 
                 if (usuario != null && item != null) {
                     Emprestimo emprestimo = new Emprestimo(usuario, item, dataSaida, dataPrevista);
+                    item.setDisponivel(false);
                     emprestimos.add(emprestimo);
                 }
             }

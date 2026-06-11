@@ -123,23 +123,23 @@ public class TelaCadastroItem extends JFrame {
 
         btnCadastrar.addActionListener(e -> {
             String tipo = (String) comboTipo.getSelectedItem();
-            String titulo = txtTitulo.getText();
+            String titulo = txtTitulo.getText().trim();
             int id = biblioteca.gerarIdItem();
 
             switch (tipo) {
                 case "Livro" -> {
-                    String autor = txtAutor.getText();
-                    int numPaginas = Integer.parseInt(txtNumPaginas.getText());
+                    String autor = txtAutor.getText().trim();
+                    int numPaginas = Integer.parseInt(txtNumPaginas.getText().trim());
                     biblioteca.getCatalogo().adicionarItem(new Livro(id, titulo, autor, numPaginas));
                 }
                 case "Revista" -> {
-                    int edicao = Integer.parseInt(txtEdicao.getText());
-                    String mesAno = txtMesAno.getText();
+                    int edicao = Integer.parseInt(txtEdicao.getText().trim());
+                    String mesAno = txtMesAno.getText().trim();
                     biblioteca.getCatalogo().adicionarItem(new Revista(id, titulo, edicao, mesAno));
                 }
                 case "DVD" -> {
-                    String diretor = txtDiretor.getText();
-                    int duracao = Integer.parseInt(txtDuracao.getText());
+                    String diretor = txtDiretor.getText().trim();
+                    int duracao = Integer.parseInt(txtDuracao.getText().trim());
                     biblioteca.getCatalogo().adicionarItem(new DVD(id, titulo, diretor, duracao));
                 }
             }

@@ -27,6 +27,12 @@ public class MenuUsuario extends JFrame {
         JButton btnBuscarItem = new JButton("Buscar Item");
         JButton btnVoltar = new JButton("Voltar");
 
+        btnRealizarEmprestimo.setFocusable(false);
+        btnRealizarDevolucao.setFocusable(false);
+        btnListarCatalogo.setFocusable(false);
+        btnBuscarItem.setFocusable(false);
+        btnVoltar.setFocusable(false);
+
         painel.add(titulo);
         painel.add(btnRealizarEmprestimo);
         painel.add(btnRealizarDevolucao);

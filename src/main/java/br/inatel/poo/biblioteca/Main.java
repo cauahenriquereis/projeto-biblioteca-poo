@@ -1,7 +1,6 @@
 package br.inatel.poo.biblioteca;
 
 import br.inatel.poo.biblioteca.gui.TelaPrincipal;
-import br.inatel.poo.biblioteca.model.Emprestimo;
 import br.inatel.poo.biblioteca.persistence.GerenciadorArquivos;
 import br.inatel.poo.biblioteca.service.Biblioteca;
 import br.inatel.poo.biblioteca.service.Catalogo;

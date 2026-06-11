@@ -24,6 +24,9 @@ public class TelaPrincipal extends JFrame {
         JButton btnBibliotecario = new JButton("Bibliotecário");
         JButton btnUsuario = new JButton("Usuário");
 
+        btnBibliotecario.setFocusable(false);
+        btnUsuario.setFocusable(false);
+
         painel.add(titulo);
         painel.add(btnBibliotecario);
         painel.add(btnUsuario);

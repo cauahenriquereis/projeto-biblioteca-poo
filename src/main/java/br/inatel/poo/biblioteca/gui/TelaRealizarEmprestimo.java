@@ -75,9 +75,9 @@ public class TelaRealizarEmprestimo extends JFrame {
 
         btnEmprestimo.addActionListener(e -> {
             try {
-                int idUsuario = Integer.parseInt(txtIdUsuario.getText());
-                int idItem = Integer.parseInt(txtIdItem.getText());
-                int prazo = Integer.parseInt(txtPrazo.getText());
+                int idUsuario = Integer.parseInt(txtIdUsuario.getText().trim());
+                int idItem = Integer.parseInt(txtIdItem.getText().trim());
+                int prazo = Integer.parseInt(txtPrazo.getText().trim());
 
                 Usuario usuario = biblioteca.buscarUsuario(idUsuario);
                 ItemBiblioteca item = biblioteca.getCatalogo().buscarItemPorId(idItem);

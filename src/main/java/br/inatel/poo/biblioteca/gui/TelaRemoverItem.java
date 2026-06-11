@@ -54,7 +54,7 @@ public class TelaRemoverItem extends JFrame {
 
         btnRemover.addActionListener(e -> {
 
-            int idItem = Integer.parseInt(txtIdItem.getText());
+            int idItem = Integer.parseInt(txtIdItem.getText().trim());
 
             biblioteca.getCatalogo().removerItem(idItem);
 

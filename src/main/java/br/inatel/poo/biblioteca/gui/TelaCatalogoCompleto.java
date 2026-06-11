@@ -26,7 +26,8 @@ public class TelaCatalogoCompleto extends JFrame {
         areaTexto.setEditable(false);
 
         for (ItemBiblioteca item : biblioteca.getCatalogo().getItens()) {
-            areaTexto.append(item.getTitulo() + " | " + item.getClass().getSimpleName() + "\n");
+            String status = item.isDisponivel() ? "Disponível" : "Indisponível";
+            areaTexto.append(item.getTitulo() + " | " + item.getClass().getSimpleName() + " | " + status + "\n");
         }
 
         JScrollPane scrollPane = new JScrollPane(areaTexto);

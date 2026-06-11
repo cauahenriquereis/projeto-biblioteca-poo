@@ -49,7 +49,7 @@ public class TelaBuscarItem extends JFrame {
 
         btnBuscar.addActionListener(e -> {
             areaTexto.setText("");
-            String termoBusca = txtTitulo.getText();
+            String termoBusca = txtTitulo.getText().trim();
 
             for (ItemBiblioteca item : biblioteca.getCatalogo().buscarPorTitulo(termoBusca)) {
                 areaTexto.append(item.getTitulo() + " | " + item.getClass().getSimpleName() + "\n");

@@ -6,3 +6,4 @@ LIVRO;6;Interestelar;Christopher Nolan;169
 LIVRO;7;A psicologia financeira;Morgan Housel;276
 REVISTA;8;Copa do Mundo - Brasil Hexa;1;maio 2026
 DVD;9;A casa monstro;Gil Kenan;135
+LIVRO;9;It a Coisa;Stephen King;1023

@@ -31,6 +31,12 @@ public class MenuBibliotecario extends JFrame {
         JButton btnRemoverItem = new JButton("Remover Item");
         JButton btnVoltar = new JButton("Voltar");
 
+        btnCadastrarItem.setFocusable(false);
+        btnCadastrarUsuario.setFocusable(false);
+        btnListarCatalogo.setFocusable(false);
+        btnRemoverItem.setFocusable(false);
+        btnVoltar.setFocusable(false);
+
         painel.add(titulo);
         painel.add(btnCadastrarItem);
         painel.add(btnCadastrarUsuario);

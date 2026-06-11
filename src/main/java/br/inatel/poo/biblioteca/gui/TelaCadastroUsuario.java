@@ -47,9 +47,9 @@ public class TelaCadastroUsuario extends JFrame {
 
         btnCadastrar.addActionListener(e -> {
             int id = biblioteca.gerarIdUsuario();
-            String nome = txtNome.getText();
-            String cpf = txtCpf.getText();
-            String telefone = txtTelefone.getText();
+            String nome = txtNome.getText().trim();
+            String cpf = txtCpf.getText().trim();
+            String telefone = txtTelefone.getText().trim();
 
             Usuario usuario = new Usuario(id, nome, cpf, telefone);
             biblioteca.cadastrarUsuario(usuario);
